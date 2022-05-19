@@ -11,7 +11,7 @@ public abstract class TestCase {
 
     @BeforeEach
     public void init(){
-        System.setProperty("webdriver.chrome.driver","/C:\\Users\\User\\Desktop\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\andre\\Downloads\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 

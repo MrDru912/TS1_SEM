@@ -1,20 +1,24 @@
 package mamaeand;
 
-public class CompanyForm {
+public class GetInTouchForm {
     private String name;
     private String email;
     private String phoneNumber;
     private String company;
-    private String companySize;
+    private String website;
     private String country;
+    private String interestedIn;
+    private String message;
 
-    public CompanyForm(String name, String email, String phoneNumber, String company, String companySize, String country) {
+    public GetInTouchForm(String name, String email, String phoneNumber, String company, String website, String country, String interestedIn, String message) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.company = company;
-        this.companySize = companySize;
+        this.website = website;
         this.country = country;
+        this.interestedIn = interestedIn;
+        this.message = message;
     }
 
     public String getName() {
@@ -33,11 +37,19 @@ public class CompanyForm {
         return company;
     }
 
-    public String getCompanySize() {
-        return companySize;
+    public String getWebsite() {
+        return website;
     }
 
     public String getCountry() {
         return country;
+    }
+
+    public String getInterestedIn() {
+        return interestedIn;
+    }
+
+    public String getMessage() {
+        return message;
     }
 }
