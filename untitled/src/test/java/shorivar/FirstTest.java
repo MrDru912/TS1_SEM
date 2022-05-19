@@ -15,7 +15,7 @@ public class FirstTest {
        // WebElement button =  driver.findElement(By.xpath("//*[@class=\"pub__btn__label\"]"));
         //  <span class="pub__btn__label">Podělte se o zkušenost</span>
         // <textarea id="sgE-90194077-3-231-element" name="sgE-90194077-3-231" class="sg-input sg-input-essay" cols="125" rows="5"></textarea>
-      //  WebElementAction.doClick(driver, button);
+      //  HelpClasses.WebElementAction.doClick(driver, button);
 
     }
 }
