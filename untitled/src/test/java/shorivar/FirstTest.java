@@ -1,21 +1,17 @@
 package shorivar;
 
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import HelpClasses.TestCase;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 /**Created by shorivar*/
-public class FirstTest {
 
-    @Test
-    public void FirstTest(){
-      //  ChromeDriver driver = Intro.doChrome("https://wolt.com/en/jobs");
-
-       // WebElement button =  driver.findElement(By.xpath("//*[@class=\"pub__btn__label\"]"));
-        //  <span class="pub__btn__label">Podělte se o zkušenost</span>
-        // <textarea id="sgE-90194077-3-231-element" name="sgE-90194077-3-231" class="sg-input sg-input-essay" cols="125" rows="5"></textarea>
-      //  HelpClasses.WebElementAction.doClick(driver, button);
-
+public class FirstTest extends TestCase{
+    @ParameterizedTest
+    @CsvSource({
+            "Jordan, Peel, jordan@gmail.com, Japan, +34684257921, hi"
+    })
+    public void FirstTest(String first, String last, String emailData, String loc, String num, String letter){
+        new WorkChoose(getDriver()).getData().getData(first, last, emailData, loc, num, letter);
     }
 }
