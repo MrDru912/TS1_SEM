@@ -1,8 +1,9 @@
-package mamend;
+package mamend.WoltTests;
 
 import HelpClasses.TestCase;
 import mamaeand.CompanyForm;
 import mamaeand.GetInTouchForm;
+import mamend.WoltStartPage;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 

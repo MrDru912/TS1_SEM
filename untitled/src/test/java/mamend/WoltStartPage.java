@@ -25,6 +25,9 @@ public class WoltStartPage {
     @FindBy(how = How.XPATH, using = "//a[text()='Wolt Drive']")
     private WebElement woltDriveLink;
 
+    @FindBy(how = How.XPATH, using = "//a[text()='Engineering blog']")
+    private WebElement engeineeringBlogLink;
+
     public WoltStartPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(this.driver,this);
@@ -45,9 +48,14 @@ public class WoltStartPage {
 
     public ChooseCityPage chooseCountry(String country){
         WebElement countryButton = driver.findElement(By.xpath("//span[text()='"+country+"']"));
-//        countryButton.click();
         Utils.jsClick(countryButton,driver);
         return new ChooseCityPage(driver);
+    }
+
+    public EngineeringBlogPage goToEngBlog(){
+        Wait.wait30(engeineeringBlogLink,driver);
+        Utils.jsClick(engeineeringBlogLink,driver);
+        return new EngineeringBlogPage(driver);
     }
 
 }
