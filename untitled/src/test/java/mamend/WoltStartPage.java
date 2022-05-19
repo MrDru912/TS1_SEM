@@ -3,6 +3,7 @@ package mamend;
 import HelpClasses.Utils;
 import HelpClasses.Wait;
 import mamaeand.CompanyForm;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,7 +28,7 @@ public class WoltStartPage {
     public WoltStartPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(this.driver,this);
-        driver.get("https://wolt.com/en/wolt-at-work");
+        driver.get("https://wolt.com/en/");
     }
 
     public ForCompaniesPage goToForCompanies(){
@@ -41,4 +42,12 @@ public class WoltStartPage {
         Utils.jsClick(woltDriveLink,driver);
         return new WoltDrivePage(driver);
     }
+
+    public ChooseCityPage chooseCountry(String country){
+        WebElement countryButton = driver.findElement(By.xpath("//span[text()='"+country+"']"));
+//        countryButton.click();
+        Utils.jsClick(countryButton,driver);
+        return new ChooseCityPage(driver);
+    }
+
 }
