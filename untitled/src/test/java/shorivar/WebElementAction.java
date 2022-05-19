@@ -1,6 +1,8 @@
-import org.openqa.selenium.By;
+package shorivar;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import shorivar.Wait;
 
 public class WebElementAction {
     public static void doClick(ChromeDriver driver, WebElement e){
