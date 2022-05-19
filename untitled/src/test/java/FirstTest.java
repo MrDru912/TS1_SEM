@@ -1,11 +1,7 @@
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 /**Created by shorivar*/
 public class FirstTest {
@@ -14,11 +10,15 @@ public class FirstTest {
     public void FirstTest(){
         ChromeDriver driver = Intro.doChrome("https://www.ikea.com/cz/cs/customer-service/zlepseme-spolecne-nakup-v-ikea-pub8bf501a0");
 
-        WebElement button =  driver.findElement(By.xpath("//*[@id=\"d5219c80-5df2-11ea-9ffe-83780ddb6b86\"]/pub-hide-empty-link/div/a/span/span"));
+        WebElement button =  driver.findElement(By.xpath("//*[@class=\"pub__btn__label\"]"));
+        //  <span class="pub__btn__label">Podělte se o zkušenost</span>
+        // <textarea id="sgE-90194077-3-231-element" name="sgE-90194077-3-231" class="sg-input sg-input-essay" cols="125" rows="5"></textarea>
         Wait.wait30(button, driver);
         button.click();
-        WebElement textarea = driver.findElement(By.xpath("//*[@id=\"sgE-90194077-3-231-element\"]"));
-      //  Wait.wait30(textarea, driver);
+        WebElement textarea = driver.findElement(By.xpath("//textarea[@class=\"sg-input sg-input-essay\"]"));
+        Wait.wait30(textarea, driver);
+        textarea.click();
+        Wait.wait30(textarea, driver);
         textarea.sendKeys("I use your website for my hm of testing, sorry");
         WebElement button2 =  driver.findElement(By.xpath("//*[@id=\"sg_NextButton\"]"));
         Wait.wait30(button2, driver);
