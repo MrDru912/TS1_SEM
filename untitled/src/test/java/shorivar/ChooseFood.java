@@ -20,6 +20,12 @@ public class ChooseFood {
     private WebElement food2;
     @FindBy(how = How.XPATH, using = "/html/body/div[17]/div/aside/footer/div/div/div/div[2]/button")
     private WebElement add2;
+    @FindBy(how = How.XPATH, using = "/html/body/div[1]/div[3]/main/div/div[5]/div/button")
+    private WebElement order;
+    @FindBy(how = How.XPATH, using = "/html/body/div[1]/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/a/button")
+    private WebElement google;
+    @FindBy(how = How.XPATH, using = "//*[@id=\"app\"]/div[1]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/button[2]")
+    private WebElement facebook;
 
     public ChooseFood(WebDriver driver) {
         this.driver = driver;
@@ -30,8 +36,10 @@ public class ChooseFood {
     public ChooseFood takeFood(){
        // WebElementAction.doClick(driver, accept);
         WebElementAction.doClick(driver, food1);
-        Utils.jsClick(add1, driver);
-        //WebElementAction.doClick(driver, add1);
+        //Utils.jsClick(add1, driver);
+        WebElementAction.doClick(driver, add1);
+        Utils.jsClick(order, driver);
+        Utils.jsClick(facebook, driver);
         //WebElementAction.doClick(driver, food2);
         //Utils.jsClick(add2, driver);
         //WebElementAction.doClick(driver, add2);

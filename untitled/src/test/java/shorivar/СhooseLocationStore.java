@@ -24,11 +24,7 @@ public class СhooseLocationStore {
 
     public LocationStoreBlank ChooseLocal(){
         WebElementAction.doClick(driver, accept);
-        //WebElementAction.doClick(driver, article);
         Utils.jsClick(article, driver);
-        // WebElementAction.doClick(driver, slide01);
-        //WebElementAction.doClick(driver, request);
-        //WebElementAction.doClick(driver, facebook);
         return new LocationStoreBlank(driver);
     }
 }

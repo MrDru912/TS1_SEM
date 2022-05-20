@@ -32,6 +32,7 @@ public class LocationStoreBlank {
         this.driver = driver;
         PageFactory.initElements(this.driver,this);
         driver.get("https://webforms.pipedrive.com/f/2XBZBT0X5P97qXz8ySkTeAocRAYzb1FgUoDkv1vC2m1P5hLub6ChWJokZEGLxzoen");
+
     }
 
     public LocationStoreBlank doBlank(){

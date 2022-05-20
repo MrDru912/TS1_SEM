@@ -16,27 +16,23 @@ public class AllTest extends TestCase{
 
     @Test
     public void BuyTestMarket(){
-        //new ChooseRestaurants(getDriver()).goToRestaurants();
-        // new ChooseFood(getDriver()).takeFood();
-        //new ChooseMarket(getDriver()).goToMarket();
         new ChooseMarket(getDriver()).goToMarket().takeFood();
     }
 
     @Test
     public void BuyTestRestaurant(){
         new ChooseRestaurants(getDriver()).goToRestaurants().takeFood();
-        //new ChooseMarket(getDriver()).goToMarket();
-        //new ChooseMarketFood(getDriver()).takeFood();
     }
 
     @Test
     public void ForCouriersTest(){
-        new  СhooseLocationCouriers(getDriver()).ChooseLocal().doAkk();//.doAkk();//.ChooseLocal().doBlank();
+        new  СhooseLocationCouriers(getDriver()).ChooseLocal().doAkk();
     }
 
     @Test
     public void ForStoresTest(){
-        new  СhooseLocationStore(getDriver()).ChooseLocal().doBlank();
+        LocationStoreBlank l = new  СhooseLocationStore(getDriver()).ChooseLocal();
+        l.doBlank();
     }
 
     @ParameterizedTest
@@ -44,13 +40,12 @@ public class AllTest extends TestCase{
             "Jordan, Peel, jordan@gmail.com, hi, Other, Angola, Berlin, +34684257921"
     })
     public void MediaTest(String first, String last, String emailData, String pub, String j, String c, String ci, String num){
-        new NewsPage(getDriver()).getData(first, last, emailData, pub, j, c, ci, num);
-        // new PressPage(getDriver()).getData().getData(first, last, emailData, pub, j, c, ci, num);
+         new PressPage(getDriver()).getData().getData(first, last, emailData, pub, j, c, ci, num);
     }
 
     @Test
     public void SubscribeTest(){
-        new  doSubscribe(getDriver()).BlankSubscribe();//.doAkk();//.ChooseLocal().doBlank();
+        new  doSubscribe(getDriver()).BlankSubscribe();
     }
 
     @Test
