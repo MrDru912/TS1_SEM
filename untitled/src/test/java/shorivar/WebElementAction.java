@@ -11,8 +11,12 @@ public class WebElementAction {
         WaitClass.wait30(e, driver);
         e.click();
     }
+    public static void doFastClick(WebDriver driver, WebElement e){
+        WaitClass.wait10(e, driver);
+        e.click();
+    }
     public static void doKeys(WebDriver driver, WebElement e, String name){
-        WaitClass.wait30(e, driver);
+        WaitClass.wait10(e, driver);
         e.sendKeys(name);
     }
     public static void doSelect(WebDriver driver, WebElement e, String name){

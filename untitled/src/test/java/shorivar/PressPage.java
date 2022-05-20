@@ -30,8 +30,8 @@ public class PressPage {
         //WebElementAction.doClick(driver, accept);
         WebElementAction.doClick(driver, article);
         WebElementAction.doClick(driver, slide01);
-        WebElementAction.doClick(driver, request);
-        WebElementAction.doClick(driver, facebook);
+        //WebElementAction.doClick(driver, request);
+        //WebElementAction.doClick(driver, facebook);
         return new NewsPage(driver);
     }
 }
