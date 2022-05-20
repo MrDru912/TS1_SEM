@@ -1,5 +1,6 @@
 package shorivar;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,8 +16,8 @@ public class WebElementAction {
         e.sendKeys(name);
     }
     public static void doSelect(WebDriver driver, WebElement e, String name){
-        WaitClass.wait30(e, driver);
-        Select s = new Select(e);
-        s.selectByVisibleText(name);;
+        //WaitClass.wait10(e, driver);
+       new Select(e).selectByVisibleText(name);
+        //new Select(driver.findElement(By.name("lead[job_title]"))).selectByVisibleText("Other");
     }
 }
