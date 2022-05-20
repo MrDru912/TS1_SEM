@@ -14,7 +14,7 @@ public class ChooseFood {
     private WebElement accept;
     @FindBy(how = How.XPATH, using = "//*[@id=\"mainContent\"]/div/div[4]/div[2]/div[1]/div[4]/div/section[1]/div[2]/div[1]/div/button")
     private WebElement food1;
-    @FindBy(how = How.XPATH, using = "//div[text()='Add to order']")
+    @FindBy(how = How.XPATH, using = "//span[@data-localization-key='product-modal.submit.add']")
     private WebElement add1;
     @FindBy(how = How.XPATH, using = "//*[@id=\"mainContent\"]/div/div[4]/div[2]/div[1]/div[4]/div/section[5]/div[2]/div[3]/div/button")
     private WebElement food2;
@@ -28,7 +28,7 @@ public class ChooseFood {
     }
 
     public ChooseFood takeFood(){
-        WebElementAction.doClick(driver, accept);
+       // WebElementAction.doClick(driver, accept);
         WebElementAction.doClick(driver, food1);
         Utils.jsClick(add1, driver);
         //WebElementAction.doClick(driver, add1);
