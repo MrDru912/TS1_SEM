@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class SubscribeTest extends TestCase{
     @Test
-    public void ForStoresTest(){
+    public void SubscribeTest(){
         new  doSubscribe(getDriver()).BlankSubscribe();//.doAkk();//.ChooseLocal().doBlank();
     }
     @Test

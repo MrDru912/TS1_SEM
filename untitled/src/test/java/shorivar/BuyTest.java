@@ -17,4 +17,5 @@ public class BuyTest extends TestCase {
         //new ChooseMarket(getDriver()).goToMarket();
         //new ChooseMarketFood(getDriver()).takeFood();
     }
+
 }
